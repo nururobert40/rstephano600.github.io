@@ -9,9 +9,16 @@
     <!-- <link rel="stylesheet" href="style.css"> -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <style>
-        body{
+      @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+
+
+body{
     width: 100%;
+    height: auto;
     padding: 0;
     margin: 0;
     font-size: 1rem;
@@ -21,7 +28,8 @@
 }
 article{
         width: 100%;
-
+        height: 1300px;
+        /* background-color: blue; */
 }
 aside{
     width: 50%;
@@ -35,22 +43,24 @@ aside .container{
     height: 500px;
     background-color: gray;
 }
-.container ul li{
-    list-style: none;
-    /* height: 20px; */
-    /* background-color: blue; */
-}
-.container ul li a{
+.container a{
     text-decoration: none;
-    height: 30px;
-    background-color: blue;
 }
-.container ul li a h3{
+.container div{
+    width:100%;
+    height: 50px;
+    /* background-color: antiquewhite; */
+    align-items: center;
+    display: flex;
+}
+.container div:hover{
+    background-color: antiquewhite;
+}
+.container div h3{
     font-size: 20px;
-    font-weight: 100;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: aliceblue;
+    margin-left: 40px;
 }
+
 aside .close{
     width: 40%;
     height: 500px;
@@ -72,12 +82,13 @@ header{
     display: flex;
 }
 header .logo{
-    width: 30%;
+    width: 25%;
     height: auto;
 }
 header ul{
     display: flex;
-    width: 70%;
+    height: 100px;
+    width: 68%;
     text-align: center;
     align-items: center;
 }
@@ -95,6 +106,17 @@ header ul li a h3{
     font-weight: 100;
     font-family: 'Gill Sans', 'Gill Sans MT','Trebuchet MS', sans-serif;
     color: aliceblue;
+}
+header .icon{
+    width: 7%;
+    height: 100px;
+    text-align: center;
+    /* justify-items: center; */
+    align-items: center;
+    display: none;
+}
+.icon i{
+    font-size: 25px;
 }
 
 /* CONTENTS START */
@@ -126,22 +148,11 @@ header ul li a h3{
     width: 20%;
     transition: 2s;
 }
-.img1{
+#imge{
     width: 1100px;
     height: 600px;
 }
-.img2{
-    width: 1100px;
-    height: 600px;
-}
-.img3{
-    width: 1100px;
-    height: 600px;
-}
-.img4{
-    width: 1100px;
-    height: 600px;
-}
+
 
 /* CSS FOR MANUAL NAVIGATION */
 .navigation-manual{
@@ -214,7 +225,7 @@ footer{
     background-color: black;
     color: aliceblue;
     display: flex;
-    margin-top: 20px;
+    margin-top: 30px;
 }
 footer .hide{
     width: 25%;
@@ -237,10 +248,177 @@ footer .media{
     height: auto;
     text-align: center;
 }
+
+
+/* RESPONSIVENESS */
+
+@media (max-width:1040px) {
+
+
+    body{
+        width: 100%;
+        height: auto;
+    }
+    article{
+            width: 100%;
+            height: auto;
+            /* background-color: blue; */
+    }
+
+/* HEADER */
+header .logo{
+    width: 10%;
+}
+header ul{
+    width: 88%;
+}
+
+
+
+/* CONTENTS START */
+.content{
+    text-align:center;
+    width: 100%;
+    height: auto;
+    /* background-color: antiquewhite; */
+}
+
+.slider{
+    width: 98%;
+    height: 600px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: blue;
+    margin-left: 1%;
+    margin-right: 1%;
+}
+#imge{
+    width: 1050px;
+    height: 600px;
+}
+
+/* FOOTER */
+
+footer .hide{
+    width: 33%;
+    height: auto;
+    text-align: center;
+}
+
+footer .register{
+  display: none;
+}
+footer .quick{
+    width: 33%;
+    height: auto;
+    text-align: center;
+}
+footer .media{
+    width: 33%;
+    height: auto;
+    text-align: center;
+}
+}
+
+
+
+/* mobile apps */
+@media (max-width:500px) {
+
+article{
+        width: 100%;
+        height: auto;
+        /* background-color:red; */
+}
+
+
+/* HEADER */
+
+header .logo{
+  display: none;
+}
+
+header ul li{
+    list-style: none;
+    margin-left: 15px;
+    /* background-color: blue; */
+}
+
+header ul li:last-child a{
+    display: none;
+}
+header ul li a h3{
+    font-size: 15px;
+}
+
+header .icon{
+    display: flex;
+}
+
+
+/* SIDE BAR */
+aside{
+    width: 100%;
+}
+
+
+
+
+/* CONTENTS START */
+.content{
+    text-align: center;
+    width: 100%;
+    height: auto;
+    /* background-color: antiquewhite; */
+}
+
+.slider{
+    width: 98%;
+    height: 400px;
+}
+.slides{
+    height: 400px;
+}
+.slides input{
+    display: none;
+}
+
+#imge{
+    width: 500px;
+    height: 400px;
+}
+
+/* CSS FOR MANUAL NAVIGATION */
+.navigation-manual{
+    width: 98%;
+}
+
+
+/* FOOTER */
+footer{
+    width: 100%;
+    height: 200px;
+    background-color: black;
+    color: aliceblue;
+    display: flex;
+    margin-top: 30px;
+}
+footer .hide{
+    width: 50%;
+    height: auto;
+    text-align: center;
+}
+
+footer .quick{
+  display: block;
+}
+footer .media{
+    width: 50%;
+    height: auto;
+    text-align: center;
+}
+}
     </style>
-
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script>
     $(document).ready(function(){
       $("p").click(function(){
@@ -256,26 +434,25 @@ footer .media{
     </script>
 </head>
 <body>
-
-    <article>
+ <article>
         <aside>
             <div class="container">
-                <ul>
-                    <li><a href="#"><h3>ACCOUNT</h3></a></li>
-                    <li><a href="#"><h3>REGISTER</h3></a></li>
-                    <li><a href="#"><h3>SERVICES</h3></a></li>
-                    <li><a href="#"><h3>NEWS</h3></a></li>
-                    <li><a href="#"><h3>COSTS</h3></a></li>
-                    <li><a href="#"><h3>QUICK LINKS</h3></a></li>
-                    <li><a href="#"><h3>OFFERS</h3></a></li>
-                </ul>
+<br>
+                <a href="#"><div><h3>ACCOUNT</h3></div></a>
+                <a href="#"><div><h3>REGISTER</h3></div></a>
+                <a href="#"><div><h3>SERVICES</h3></div></a>
+                <a href="#"><div><h3>NEWS</h3></div></a>
+                <a href="#"><div><h3>COSTS</h3></div></a>
+                <a href="#"><div><h3>QUICK LINKS</h3></div></a>
+                <a href="#"><div><h3>OFFERS</h3></div></a>
+            
             </div>
-            <div class="close">
+            <div class="close" id="closebtn">
                 <h1>X</h1>
             </div>
-        </aside>
-        <header>
-           
+</aside>
+      
+<header>           
            <div class="logo">
 
            </div>
@@ -286,8 +463,9 @@ footer .media{
                 <li><a href="#"><h3>CONTACT US</h3></a></li>
                 <li><a href="#"><h3>ABOUT US</h3></a></li>
             </ul>
+            <div class="icon"> <a href="#" id="menubtn"><i class='fas fa-align-justify'></i></a></div>
         </header>
-<div class="content"><br>
+<div class="content" id="content"><br>
     <h1>GET MODERN TECHNOLOGY SERVICES DAILY FROM US </h1>
 
     <div class="slider">
@@ -298,16 +476,16 @@ footer .media{
             <input type="radio" name="radio-btn" id="radio4">
         
         <div class="slide first">
-            <img class="img1" src="net.jpg" alt="">
+            <img class="img1" id="imge" src="net.jpg" alt="">
         </div>
         <div class="slide">
-            <img class="img2" src="download.jpg" alt="">
+            <img class="img2" id="imge" src="download.jpg" alt="">
         </div>
         <div class="slide">
-            <img class="img3" src="system.jpg" alt="">
+            <img class="img3" id="imge" src="system.jpg" alt="">
         </div>
         <div class="slide">
-            <img class="img4" src="tracer.webp" alt="">
+            <img class="img4" id="imge" src="tracer.webp" alt="">
         </div>
         <!-- AUTOMATIC NAVIGATION -->
         <div class="navigatio-auto">
@@ -376,11 +554,8 @@ footer .media{
 
 </footer>
     </article>
-  
 
-
-<script>
-    
+    <script> 
 
 var counter = 1;
 setInterval(function(){
@@ -390,6 +565,29 @@ setInterval(function(){
         counter = 1;
     }
 }, 5000);
-</script>
+
+
+// SIDE MENU
+
+const sideBar = document.querySelector("aside");
+const sideMenu = document.querySelector("#menubtn");
+const closeBtn = document.querySelector("#closebtn");
+const headerBtn = document.querySelector("header");
+const content = document.querySelector("#content");
+
+
+// SIDE BAR CALL
+sideMenu.addEventListener('click', () => {
+    sideBar.style.display= 'flex';
+    headerBtn.style.display = 'none';
+    content.style.display = 'none';
+})
+
+closeBtn.addEventListener('click', () => {
+    sideBar.style.display= 'none';
+    headerBtn.style.display = 'flex';
+    content.style.display = 'block';
+})
+    </script>
 </body>
 </html>
