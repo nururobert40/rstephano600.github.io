@@ -2,198 +2,249 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modern technology services provision</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>MD graphics and web designer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
     <!-- <link rel="stylesheet" href="style.css"> -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-  
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <!-- <link rel="stylesheet" href="responsiveness.css"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+
+    <!-- style -->
     <style>
-      @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+        
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,600&display=swap');
 
-
-body{
-    width: 100%;
-    height: auto;
-    padding: 0;
-    margin: 0;
-    font-size: 1rem;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-weight: 100;
-    font-style: normal;
+:root{
+  --black:#000000;
+  --white:#ffffff;
+  --blue:#0000ff;
+  --grey:	#808080;
+  --red-black:#330000;
+  --border:.1rem solid var(--black);
+  --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
+  --text-shadow:0 1.5rem 3rem rgba(0,0,0,.3);
 }
-article{
-        width: 100%;
-        height: 1300px;
-        /* background-color: blue; */
-}
-aside{
-    width: 50%;
-    height: 500px;
-    display: none;
-    background-color: black;
-    color: aliceblue;
-}
-aside .container{
-    width: 60%;
-    height: 500px;
-    background-color: gray;
-}
-.container a{
-    text-decoration: none;
-}
-.container div{
-    width:100%;
-    height: 50px;
-    /* background-color: antiquewhite; */
-    align-items: center;
-    display: flex;
-}
-.container div:hover{
-    background-color: antiquewhite;
-}
-.container div h3{
-    font-size: 20px;
-    margin-left: 40px;
+*{
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  text-transform: capitalize;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  font-weight: 200;
+  color: #000000;
+  /* color: 	#0000ff; */
+  /* clip-path: polygon(0,0 ,0 , 25% 0%100% 0%82% 100%0% 100%); */
 }
 
-aside .close{
-    width: 40%;
-    height: 500px;
-    text-align: right;
-    cursor: pointer;
+/* header */
+.header{
+  display:flex;
+  top: 0;
+  left: 0;
+  right: 0;
+  /* justify-content: space-between; */
+  align-items: center;
+  background: var(--white);
+  box-shadow: var(--box-shadow);
+  position: fixed;
+  /* position: absolute; */
+  /* position: relative; */
+  }
+ .header .logo{
+ display: flex;
+justify-content: center;
+align-items: center;
+
+  }
+
+.logo h3{
+    gap: 1rem;
 }
-aside .close h1{
-    margin-right: 30px;
-    font-size: 30px;
+.logo h3 span{
+  padding: .5rem;
+  font-size: 1.5rem;
+    }
+    
+      
+
+.header .logo img{
+width: 4rem;
+height: 4rem;
+border-radius: 50%;
+/* border: var(--border); */
+margin: 0.5rem;
+  }
+
+.header .navbar{
+  margin-left: 30rem;
 }
 
+#darkMode-icon{
+  font-size: 1.5rem;
+  margin: 1rem;
+  cursor: grab;
+}
+#menu-icon{
+  font-size: 1.5rem;
+  display: none;
+}
+#close-btn{
+       display: none;
+      transition: .2s linear;
+      margin-right: 2rem;
+      font-size: 2rem;
+}
+.header .navbar a{
+margin-right: 2rem;
+font-size: 1.2rem;
+  }
 
-/* HEADER */
-header{
-    width: 100%;
-    height: 100px;
-    background-color: black;
-    color: aliceblue;
-    display: flex;
-}
-header .logo{
-    width: 25%;
-    height: auto;
-}
-header ul{
-    display: flex;
-    height: 100px;
-    width: 68%;
-    text-align: center;
-    align-items: center;
-}
-header ul li{
-    list-style: none;
-    margin-left: 40px;
-    /* background-color: blue; */
-}
-header ul li a{
-    text-decoration: none;
+  .header .navbar a:hover{
+    border-bottom: 1px solid var(--black);
+    /* transition: .9s linear; */
+      }
 
-}
-header ul li a h3{
-    font-size: 20px;
-    font-weight: 100;
-    font-family: 'Gill Sans', 'Gill Sans MT','Trebuchet MS', sans-serif;
-    color: aliceblue;
-}
-header .icon{
-    width: 7%;
-    height: 100px;
-    text-align: center;
-    /* justify-items: center; */
-    align-items: center;
-    display: none;
-}
-.icon i{
-    font-size: 25px;
-}
 
-/* CONTENTS START */
-.content{
-    text-align: center;
-    width: 100%;
-    height: auto;
-    /* background-color: antiquewhite; */
-}
 
+      /* sliding */
+
+
+.sliding{
+width: 100%;
+}
+      
 .slider{
-    width: 1100px;
-    height: 600px;
-    border-radius: 10px;
-    overflow: hidden;
-    background-color: blue;
-    margin-left: 10%;
+width: 100%;
+height: 400px;
+border-radius: 10px;
+overflow: hidden;
+background-color: blue;
+
 }
 .slides{
-    width: 500%;
-    height: 600px;
-    display: flex;
-    background-color: tomato;
+width: 500%;
+height: 500px;
+display: flex;
+/* background-color: tomato; */
+
 }
 .slides input{
-    display: none;
+display: none;
 }
 .slide{
-    width: 20%;
-    transition: 2s;
+width: 20%;
+transition: 3s;
 }
-#imge{
-    width: 1100px;
-    height: 600px;
+.slide .s1{
+width: 100%;
+height: 400px;
+/* background-color: #330000; */
+background-image: url(images/b11.jpg);
+background-size: 100% 2000px;
+background-position:bottom;
+background-repeat: no-repeat;
+justify-content: center;
+align-items: center;
+text-align: center;
 }
+.slide .s2{
+width: 100%;
+height: 400px;
+background-image: url(images/p6.jpg);
+background-size: 100% 400px;
+background-position:bottom;
+background-repeat: no-repeat;
+justify-content: center;
+align-items: center;
+text-align: center;
+}
+.slide .s3{
+width: 100%;
+height: 400px;
+background-image: url(images/p8.jpg);
+background-size: 100% 400px;
+background-position:bottom;
+background-repeat: no-repeat;
+justify-content: center;
+align-items: center;
+text-align: center;
+}
+.slide .s4{
+width: 100%;
+height: 400px;
+background-image: url(images/p5.jpg);
+background-size: 100% 400px;
+background-position:bottom;
+background-repeat: no-repeat;
+justify-content: center;
+align-items: center;
+text-align: center;
+}
+
+
+.heading{
+font-size: 2rem;
+color: whitesmoke;
+word-spacing: .5rem;
+line-height: 5rem;
+display: block;
+}
+
+.slide p{
+color: whitesmoke;
+font-size: 1.5rem;
+line-height: 5rem;
+display: block;
+}
+
 
 
 /* CSS FOR MANUAL NAVIGATION */
 .navigation-manual{
-    position: absolute;
-    width: 1000px;
-    margin-top: -40px;
-    display: flex;
-    justify-content: center;
+position: absolute;
+width: 100%;
+margin-top: 350px;
+display: flex;
+justify-content: center;
 }
 .manual-btn{
-    border: 2px solid blue;
-    padding: 5px;
-    border-radius: 10px;
-    transition: 1s;
+border: 2px solid blue;
+padding: 5px;
+border-radius: 10px;
+transition:1s ;
 }
 .manual-btn:not(:last-child){
-    margin-right: 40px;
+margin-right: 40px;
 }
 .manual-btn:hover{
-    background: whitesmoke;
+background: whitesmoke;
 }
 #radio1:checked ~ .first{
-    margin-left: 0;
+    margin-left:0 ;
 }
 #radio2:checked ~ .first{
-    margin-left: -20%;
+    margin-left:-20% ;
 }
 #radio3:checked ~ .first{
-    margin-left: -40%;
+    margin-left:-40% ;
 }
 #radio4:checked ~ .first{
-    margin-left: -60%;
+    margin-left:-60% ;
 }
 
 /* CSS FOR AUTOMATIC NAVIGATION */
 .navigation-auto{
     position: absolute;
     display: flex;
-    width: 800px;
+    width: 100%;
     justify-content: center;
-    margin-top: 460px;
+    margin-top: 350px;
+
 }
 .navigation-auto div{
     border: 2px solid blue;
@@ -218,432 +269,1169 @@ header .icon{
     background: wheat;
 }
 
-/* FOOTER */
-footer{
-    width: 100%;
-    height: 200px;
-    background-color: black;
-    color: aliceblue;
-    display: flex;
-    margin-top: 30px;
+
+
+
+/* services */
+.services{
+  width: 100%;
+  text-align: center;
 }
-footer .hide{
-    width: 25%;
-    height: auto;
-    text-align: center;
+.services h3{
+color: black;
 }
-
-footer .register{
-    width: 25%;
-    height: auto;
-    text-align: center;
+.services .boxes{
+width: 100%;
+display: flex;
+align-items: center;
+justify-content: center;
+margin-bottom: 1rem;
 }
-footer .quick{
-    width: 25%;
-    height: auto;
-    text-align: center;
+.services .sev{
+width: 20%;
+border: var(--border);
+margin: .5rem;
+background: #dfd9d9;
+border-radius: .5rem;
+box-shadow:0 .5rem .5rem black ;
+display: inline-block;
 }
-footer .media{
-    width: 25%;
-    height: auto;
-    text-align: center;
+.services .sev:hover{
+background-color: wheat;
 }
-
-
-/* RESPONSIVENESS */
-
-@media (max-width:1040px) {
-
-
-    body{
-        width: 100%;
-        height: auto;
-    }
-    article{
-            width: 100%;
-            height: auto;
-            /* background-color: blue; */
-    }
-
-/* HEADER */
-header .logo{
-    width: 10%;
+.btn{
+background: var(--black);
+color: var(--white);
+display: inline-block;
+padding: .8rem;
+border-radius: .6rem;
+font-weight: 600;
+letter-spacing: .1rem;
+box-shadow: var(--box-shadow);
+border: .2rem solid transparent;
+font-size: 1rem;
+transition: .5s ease;
+margin: 1rem;
 }
-header ul{
-    width: 88%;
+.btn:hover{
+background: #0000ff;
 }
-
-
-
-/* CONTENTS START */
-.content{
-    text-align:center;
-    width: 100%;
-    height: auto;
-    /* background-color: antiquewhite; */
+.sev p{
+font-size: 1.5rem;
+padding: .5rem;
+}
+.sev h4{
+font: 1em sans-serif;
+word-spacing: .1rem;
+padding: .5rem;
 }
 
-.slider{
-    width: 98%;
-    height: 600px;
-    border-radius: 10px;
-    overflow: hidden;
-    background-color: blue;
-    margin-left: 1%;
-    margin-right: 1%;
+#second{
+display: none;
 }
-#imge{
-    width: 1050px;
-    height: 600px;
+#second-btn{
+display: none;
+}
+#third{
+display: none;
 }
 
 
 
-/* FOOTER */
-
-footer .hide{
-    width: 33%;
-    height: auto;
-    text-align: center;
+/* designers */
+html,
+body {
+position: relative;
+height: 100%;
 }
 
-footer .register{
-  display: none;
-}
-footer .quick{
-    width: 33%;
-    height: auto;
-    text-align: center;
-}
-footer .media{
-    width: 33%;
-    height: auto;
-    text-align: center;
-}
+.designers{
+width: 100%;
+height: 350px;
+/* background-color: #0000ff; */
+display: flex;
+align-items: center;
+justify-content: center;
 }
 
-
-
-/* mobile apps */
-@media (max-width:500px) {
-
-article{
-        width: 100%;
-        height: auto;
-        /* background-color:red; */
+.view{
+width: 30%;
+}
+.view h3{
+color: #000;
 }
 
-
-/* HEADER */
-
-header .logo{
-  display: none;
+body {
+background: #eee;
+font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+font-size: 14px;
+color: #000;
+margin: 0;
+padding: 0;
 }
 
-header ul li{
-    list-style: none;
-    margin-left: 15px;
-    /* background-color: blue; */
+.swiper {
+width: 50%;
+height: 300px;
+box-shadow:0 1rem 1rem black ;
 }
 
-header ul li:last-child a{
-    display: none;
-}
-header ul li a h3{
-    font-size: 15px;
-}
-
-header .icon{
-    display: flex;
+.swiper-slide {
+width: 100%;
+text-align: center;
+font-size: 18px;
+/* background: #fff; */
+display: flex;
+justify-content: center;
+align-items: center;
 }
 
 
-/* SIDE BAR */
-aside{
-    width: 100%;
+.swiper-slide .container{
+width: 100%;
+height: 300px;
+border: .1rem solid black;
+/* background-image: url(images/md2.jpg); */
+background-size: cover;
+background-position: top;
+display: block;
+justify-content: center;
+align-items: center;
+border-radius: 1rem;
+
+}
+.p{
+color: #000;
+}
+.container p{
+margin-top: 150px;
+color: #ffffff;
+font-weight: 600;
+}
+.container p:hover{
+margin-top: 150px;
+color: #000;
+font-weight: 600;
 }
 
-
-
-
-/* CONTENTS START */
-.content{
-    text-align: center;
-    width: 100%;
-    height: auto;
-    /* background-color: antiquewhite; */
+.container .btn{
+/* float: right; */
+/* margin-top: 100px; */
 }
-
-.slider{
-    width: 98%;
-    height: 400px;
+.swiper-button-prev,
+.swiper-button-next{
+font-size: 2rem;
+/* background-color: #330000; */
+width: 300px;
+height: 200px;
+padding-top: 50px;
+padding-bottom: 50px;
+padding-left: 50px;
+padding-right: 50px;
+position: absolute;
+border-radius: 1rem;
 }
-.slides{
-    height: 400px;
-}
-.slides input{
-    display: none;
-}
-
-#imge{
-    width: 500px;
-    height: 400px;
-}
-
-/* CSS FOR MANUAL NAVIGATION */
-.navigation-manual{
-    width: 98%;
-}
-
-
-/* FOOTER */
-footer{
-    width: 100%;
-    height: 200px;
-    background-color: black;
-    color: aliceblue;
-    display: flex;
-    margin-top: 30px;
-}
-footer .hide{
-    width: 50%;
-    height: auto;
-    text-align: center;
-}
-
-footer .quick{
-  display: block;
-}
-footer .media{
-    width: 50%;
-    height: auto;
-    text-align: center;
-}
-
-/* mobiles */
-
-
-/* HEADER */
-
-header .logo{
-  display: none;
-}
-
-header ul li{
-    list-style: none;
-    margin-left: 10px;
-    /* background-color: blue; */
-}
-
-header ul li:last-child a{
-    display: none;
-}
-header ul li a h3{
-    font-size: 13px;
-}
-
-header .icon{
-    display: flex;
-}
-
-/* FOOTER */
-footer{
-    width: 100%;
-    height: 200px;
-    background-color: black;
-    color: aliceblue;
-    display: flex;
-    margin-top: 30px;
-}
-footer .hide{
-    width: 50%;
-    height: auto;
-    text-align: center;
-}
-
-footer .quick{
-  display: none;
-}
-footer .media{
-    width: 50%;
-    height: auto;
-    text-align: center;
+.swiper-button-prev:hover,
+.swiper-button-next:hover{
+background-color: #fff;
 }
 
 
 
 
+
+/* about */
+.about{
+width: 100%;
+text-align: center;
 }
+.about h3{
+color: #000000;
+}
+.image{
+width: 100%;
+display: flex;
+align-items: center;
+justify-content: center;
+margin-bottom: 1rem;
+}
+.image .img{
+width:40%;
+height: 35rem;
+background-image: url(images/mdservice.jpg);
+
+background-repeat: no-repeat;
+/* background-position: center; */
+background-size: cover;
+border-radius: 1rem;
+}
+.image .img:hover{
+background-image: url(images/md1.jpg);
+}
+.about .detail{
+width: 40% ;
+text-align: left;
+margin: 1rem;
+}
+.detail h3{
+margin-left: 2rem;
+}
+.detail p{
+font-size:1.3rem;
+line-height: 2rem;
+margin-left: 2rem;
+/* height: 20rem; */
+}
+.detail a{
+line-height: 2rem;
+margin-left: 2rem;
+}
+.detail a:last-child{
+margin-left: 10rem;
+padding: 0 1rem;
+
+}
+details{
+display: flex;
+align-items: center;
+}
+
+details img{
+width: 20rem;
+height: 15rem;
+}
+
+
+/* contacts */
+.contact{
+width: 100%;
+text-align: center;
+}
+.contact h3{
+color: black;
+}
+form{
+width: 100%;
+}
+form .input{
+width: 98%;
+text-align: left;
+margin-left: 2%;
+}
+.input label{
+font: 1.5rem sans-serif;
+}
+.input input{
+width: 100%;
+border: .1rem solid black;
+height: 3rem;
+margin-bottom: 1.3rem;
+border-radius: .5rem;
+font-size: 1.2rem;
+}
+textarea{
+width: 100%;
+border: .1rem solid black;
+font-size: 1rem;
+margin-bottom: 1rem;
+/* margin-top: 1rem; */
+}
+
+
+/* footer */
+.footer{
+background:black;
+/* opacity: .8; */
+/* width: 100%; */
+}
+
+.footer .container{
+gap:3rem;
+width: 100%;
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(20%, 1fr));
+justify-content: center;
+}
+.footer .container .box{
+padding: 1.5rem;
+}
+.box i{
+color: blue;
+margin-right : 1rem;
+font-weight: 800;
+}
+
+.footer .container .box h3{
+color: #ffffff;
+margin-bottom: .5rem;
+opacity: .9;
+}
+.footer .container .box a{
+display: block;
+color: #ffffff;
+line-height: 1.7rem;
+}
+.footer .copy{
+text-align: center;
+padding: .8rem;
+background: #330000;
+color: #ffffff;
+}
+
     </style>
-    <script>
-    $(document).ready(function(){
-      $("p").click(function(){
-        $(this).hide();
-      });
-    });
 
-    $(document).ready(function(){
-  $("button").click(function(){
-    $("p").css({"background-color": "green", "font-size": "150%"});
-  });
-});
-    </script>
+
+<!-- RESPONSIVENESS -->
+<style>
+/* responsiveness */
+@media (max-width:1200px){
+
+  .header .navbar{
+    margin-left: 16rem;
+    margin-right: 2rem;
+  }
+  }
+
+
+
+
+  @media (max-width:991px){
+
+    .header{
+        display:flex;
+        top: 0;
+        left: 0;
+        right: 0;
+        justify-content: space-between;
+        align-items: center;
+        }
+        .header .navbar{
+            margin-left: 0;
+            margin-right: 0;
+          }
+
+    .header .logo img{
+       margin-left: 2rem;
+          }
+          .logo h3{
+          display: none;
+        }
+    .header .navbar a{
+        font-size: 1.5rem;
+        margin-right: 1rem;
+          }
+          #darkMode-icon{
+            font-size: 1.5rem;
+            margin-right: 3rem;
+            cursor: grab;
+          }
+
+    html{
+        font-size: 80%;
+        overflow: scroll;
+    }
+    section{
+        padding: 1rem 0rem;
+    }
+    .footer .container{
+        grid-template-columns: repeat(auto-fit, minmax(45%, 1fr));
+      }
+  }
+
+
+
+
+
+  @media (max-width:820px){
+    
+      .footer .container{
+        gap:0rem;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(40%, 1fr));
+        justify-content: center;
+      }
+      .footer .container .box{
+        padding: 1.5rem;
+        margin-left: 2rem;
+        }
+        .input input{
+          width: 98%;
+          height: 4rem;
+        }
+
+        
+
+  }
+
+
+
+
+  @media (max-width:768px){
+
+    .logo h3{
+        display: flex;
+        margin-left: 2rem;
+      }
+    .header .navbar{
+        display:none;
+        width: 100%;
+        background-color:white;
+        margin-top: 20rem;
+        margin-left: 0;
+        position: absolute;
+        text-align: center;
+        padding: 1rem;
+    }
+    .header .navbar a{
+        display: block;
+        line-height: 3rem;
+    }
+
+    #close-btn{
+        display: none;
+        transition: .2s linear;
+        margin-right: 5rem;
+        font-size: 2rem;
+      }
+
+    #darkMode-icon{
+        font-size: 1.5rem;
+        margin: 1rem;
+        cursor: grab;
+        margin: 2rem;
+      }
+      #menu-icon{
+        display: flex;
+        transition: .2s linear;
+        margin-right: 5rem;
+      }
+      
+.services .boxes{
+  width: 100%;
+  display: inline-block;
+}
+.services .boxes .sev{
+  width: 30%;
+  display: inline-block;
+}
+
+.services .sev:last-child{
+  display: none;
+}
+
+form .input{
+  width: 95%;
+  text-align: left;
+  margin-left: 2%;
+}
+.input input{
+  width: 98%;
+  height: 4rem;
+}
+textarea{
+  width: 98%;
+}
+
+#hellow{
+  display: none;
+}
+       .footer .container{
+        grid-template-columns: repeat(auto-fit, minmax(45%, 1fr));
+      }
+
+      .footer .container{
+        gap:0rem;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
+        justify-content: center;
+      }
+  }
+
+
+
+
+  
+@media (max-width:450px){
+    .logo h3{
+        display: flex;
+      }
+      .header .navbar{
+        display:none;
+        width: 100%;
+        background-color:white;
+        margin-top: 20rem;
+        margin-left: 0;
+        position: absolute;
+        text-align: center;
+        padding: 1rem;
+        /* opacity: none; */
+    }
+    .header .navbar a{
+        display: block;
+        line-height: 3rem;
+    }
+
+
+    #close-btn{
+        display: none;
+        transition: .2s linear;
+        margin-right: 2rem;
+        font-size: 2rem;
+      }
+
+    #darkMode-icon{
+        font-size: 1.5rem;
+        margin: 1rem;
+        cursor: grab;
+        margin: 2rem;
+      }
+      #menu-icon{
+        display: flex;
+        transition: .2s linear;
+        margin-right: 2rem;
+      }
+
+      .slide p{
+        color: whitesmoke;
+        font-size: 1.2rem;
+        line-height: 4rem;
+        display: block;
+       }
+       .slide p:first-child{
+        margin-top: 10rem;
+       }
+
+      html{
+        font-size: 100%;
+        overflow: scroll;
+    }
+
+         
+.services .boxes{
+  width: 100%;
+  display: inline-block;
+}
+.services .boxes .sev{
+  width: 95%;
+  display: inline-block;
+}
+
+.services .sev:last-child{
+  display: none;
+}
+.image{
+  width: 100%;
+  display: block;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+.image .img{
+  width:98%;
+  height: 35rem;
+  background-image: url(images/mdservice.jpg);
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: cover;
+  border-radius: 1rem;
+}
+.image .img:hover{
+  background-image: url(images/mdservice.jpg); 
+}
+.about .detail{
+  width: 90% ;
+  text-align: left;
+  /* margin: 1rem; */
+}
+.detail h3{
+  margin-left: 2rem;
+  font-size: 1.5rem;
+}
+.detail p{
+  font-size:1rem;
+  line-height: 1.5rem;
+  margin-left: none;
+  /* height: 20rem; */
+}
+.detail a:last-child{
+  margin-left: 5rem;
+  padding: 0 1rem;
+  
+}
+.input input{
+  width: 98%;
+  height: 3rem;
+}
+#hellow{
+  display: none;
+}
+    .footer .container{
+        gap:0rem;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+        justify-content: center;
+      }
+}
+
+
+
+@media (max-width:320px){
+    #menu-icon{
+        display: flex;
+        transition: .2s linear;
+        margin-right: 5rem;
+      }
+      .logo h3{
+        display: none;
+        margin-left: 0rem;
+      }
+      .sec:first-child{
+        display: none;
+
+      }
+      .services .sev:last-child{
+        display: block;
+      }
+
+      #hellow{
+        display: none;
+      }
+}
+
+
+@media (max-width:280px){
+    .logo h3:last-child{
+        display: none;
+        margin-left: 2rem;
+      }
+      .services .sev:last-child{
+        display: block;
+      }
+
+      #hellow{
+        display: none;
+      }
+}
+
+</style>
+
 </head>
 <body>
- <article>
-        <aside>
-            <div class="container">
-<br>
-                <a href="#"><div><h3>ACCOUNT</h3></div></a>
-                <a href="#"><div><h3>REGISTER</h3></div></a>
-                <a href="#"><div><h3>SERVICES</h3></div></a>
-                <a href="#"><div><h3>NEWS</h3></div></a>
-                <a href="#"><div><h3>COSTS</h3></div></a>
-                <a href="#"><div><h3>QUICK LINKS</h3></div></a>
-                <a href="#"><div><h3>OFFERS</h3></div></a>
-            
-            </div>
-            <div class="close" id="closebtn">
-                <h1>X</h1>
-            </div>
-</aside>
-      
-<header>           
-           <div class="logo">
+<!-- header section starts -->
+<section class="header">
+    <div class="logo">
+        <img src="images/logo1.png" alt="">
+        <!-- <img src="images/mdlogo.jpg" alt=""> -->
+        <!-- <img src="images/mdlogos.jpg" alt=""> -->
+        <h3>MD designers</h3>
+    </div>
 
-           </div>
-            <ul>
-                <li><a href="#"><h3>HOME</h3></a></li>
-                <li><a href="#"><h3>SERVICES</h3></a></li>
-                <li><a href="#"><h3>NEWS</h3></a></li>
-                <li><a href="#"><h3>CONTACT US</h3></a></li>
-                <li><a href="#"><h3>ABOUT US</h3></a></li>
-            </ul>
-            <div class="icon"> <a href="#" id="menubtn"><i class='fas fa-align-justify'></i></a></div>
-        </header>
-<div class="content" id="content"><br>
-    <h1>GET MODERN TECHNOLOGY SERVICES DAILY FROM US </h1>
+    <div class="navbar" id="navbar">
+        <a href="#home" id="home1">Home</a>
+        <a href="#services" id="home2">Our Services</a>
+        <!-- <a href="#">Web design</a>
+        <a href="#">Graphics</a>
+        <a href="#">system development</a> -->
+        <a href="#about" id="home3">About us</a>
+        <a href="#contact" id="home4">contact us</a>
+    </div>
+    <!-- <div class='bx bx-moon' id="darkMode-icon"></div> -->
+    <div class="bx bx-menu" id="menu-icon"></div>
+    <div class="bx bx-x" id="close-btn"></div>
+</section>
+<!-- header section ends -->
 
-    <div class="slider">
-        <div class="slides">
-            <input type="radio" name="radio-btn" id="radio1">
-            <input type="radio" name="radio-btn" id="radio2">
-            <input type="radio" name="radio-btn" id="radio3">
-            <input type="radio" name="radio-btn" id="radio4">
+
+<!-- home section start -->
+   
+    <!-- IMAGE SLIDER -->
+    <section class="sliding" id="home">
         
-        <div class="slide first">
-            <img class="img1" id="imge" src="net.jpg" alt="">
+            <div class="slider">
+                <div class="slides">
+                    <input type="radio" name="radio-btn" id="radio1">
+                    <input type="radio" name="radio-btn" id="radio2">
+                    <input type="radio" name="radio-btn" id="radio3">
+                    <input type="radio" name="radio-btn" id="radio4">
+                
+                    <div class="slide first">
+                        <div class="s1"><br>
+                            <br><br><br><br><br>
+                            <!-- <img class="img1" src="images/p5.jpg" alt=""> -->
+                            <h3 class="heading" id="hellow">
+                                hellow!!.. MD(mbulwa designer) we are here to design  for you
+                             </h3>
+                             
+                             <p>welcome for quality and good services</p>
+                             <p>the home of quality designing</p>
+                      </div>
+                    </div>
+
+                    <div class="slide">
+                        <div class="s2"><br><br><br><br><br><br>
+                            <!-- <img class="img1" src="images/p5.jpg" alt=""> -->
+                            <h3 class="heading" id="hellow">
+                                hellow!!.. MD(mbulwa designer) we are here to design  for you
+                             </h3>
+                             <p>welcome for quality and good services</p>
+                                                          <p>the home of quality designing</p>
+                      </div>
+                    </div>
+
+                    <div class="slide">
+                        <div class="s3"><br><br><br><br><br><br>
+                            <!-- <img class="img1" src="images/p5.jpg" alt=""> -->
+                            <h3 class="heading" id="hellow">
+                                hellow!!.. MD(mbulwa designer) we are here to design  for you
+                             </h3>
+                             <p>welcome for quality and good services</p>
+                                                          <p>the home of quality designing</p>
+                      </div>
+                    </div>
+
+                    <div class="slide">
+                        <div class="s4"><br><br><br><br><br><br>
+                            <!-- <img class="img1" src="images/p5.jpg" alt=""> -->
+                            <h3 class="heading" id="hellow">
+                                hellow!!.. MD(mbulwa designer) we are here to design  for you
+                             </h3>
+                             <p>the home of quality designing</p>
+                             <p>welcome for quality and good services</p>
+                      </div>
+                    </div>
+                    
+                
+                    <!-- AUTOMATIC NAVIGATION -->
+                    <div class="navigation-auto">
+                        <div class="auto-btn1"></div>
+                        <div class="auto-btn2"></div>
+                        <div class="auto-btn3"></div>
+                        <div class="auto-btn4"></div>
+                    </div>
+                
+                
+                <!-- MANUAL NAVIGATION -->
+                <div class="navigation-manual">
+                    <label for="radio1" class="manual-btn"></label>
+                    <label for="radio2" class="manual-btn"></label>
+                    <label for="radio3" class="manual-btn"></label>
+                    <label for="radio4" class="manual-btn"></label>
+                </div>
+            </div>
+                </div>
+        
+
+        </section>
+        
+        <script>
+            var counter = 1;
+            setInterval(function(){
+                document.getElementById('radio' + counter).checked = true;
+                counter++;
+                if(counter > 4){
+                    counter = 1;
+                } 
+            }, 6000);
+
+
+// let darkModeIcon = document.querySelector('#darkMode-icon');
+// let home1 = document.querySelector('#home1');
+// let home2 = document.querySelector('#home2');
+// let home3 = document.querySelector('#home3');
+// let home4 = document.querySelector('#home4');
+
+// darkModeIcon.onclick = () => {
+//     darkModeIcon.classList.toggle('bx-sun');
+//     document.body.classList.toggle('dark-mode');
+// };
+// home1.onclick = () => {
+//     navbar.style.display= 'none';
+// };
+// home2.onclick = () => {
+//     navbar.style.display= 'none';
+// };
+// home3.onclick = () => {
+//     navbar.style.display= 'none';
+// };
+// home4.onclick = () => {
+//     navbar.style.display= 'none';
+// };
+        </script>
+
+
+
+<!-- our services -->
+<section class="services" id="services">
+<h3 class="heading">our services</h3>
+
+<div class="boxes">
+<div class="sev">
+    <p>Graphics designing</p>
+    <h4>all designing services 
+       <br> conserning studio graphic eg. Logos, Posters, Flyers etc...</h4>
+    <img src="#" alt="">
+    <a class="btn" href="#">request now</a>
+</div>
+
+<div class="sev">
+    <p>website designing</p>
+    <h4>attractive, beatfully..
+       <br> websites eg. business, e-learnings, eCommerce, Entertainment,  Media etc..</h4>
+    <img src="#" alt="">
+    <a class="btn" href="#">request now</a>
+</div>
+
+<div class="sev">
+    <p>system development</p>
+    <h4>all systems are dev 
+       <br> eg.  websites eg. business, e-learnings, eCommerce, Entertainment,  Media etc..</h4>
+    <img src="#" alt="">
+    <a class="btn" href="#">request now</a>
+</div>
+
+<div class="sev">
+    <p>studio photos</p>
+    <h4>all studio services 
+       <br> eg. video edit, image edit, video recording...</h4>
+    <img src="#" alt="">
+    <a class="btn" href="#">request now</a>
+</div>
+</div>
+
+<div class="btn" id="first-btn">more services</div>
+
+
+<div class="boxes" id="second">
+
+    <div class="sev" class="third">
+        <p>website designing</p>
+        <h4>beutfully and attractive
+           <br> websites eg. Logos, Posters, Flyers etc...</h4>
+        <img src="#" alt="">
+        <a class="btn" href="#">request now</a>
+    </div>
+
+<div class="sev" class="sec">
+    <p>Audio Logos </p>
+    <h4>Having an effective radio ad 
+       <br> is one of the most successful ways to gain recognition for your business. Click to learn more. </h4>
+    <img src="#" alt="">
+    <a class="btn" href="#">request now</a>
+</div>
+
+
+<div class="sev"class="sec">
+    <p>In-Studio Video</p>
+    <h4>High quality audio teamed 
+       <br> with high quality video, starting at just $499.95. Click to learn more. </h4>
+    <img src="#" alt="">
+    <a class="btn" href="#">request now</a>
+</div>
+
+
+<div class="sev" class="third">
+    <p>system development</p>
+    <h4>all designing services 
+       <br> conserning studio graphic eg. Logos, Posters, Flyers etc...</h4>
+    <img src="#" alt="">
+    <a class="btn" href="#">request now</a>
+</div>
+
+</div>
+
+
+<div class="btn" id="second-btn">more services</div>
+
+<div class="boxes" id="third">
+<div class="sev" class="third">
+    <p>Graphics designing</p>
+    <h4>all designing services 
+       <br> conserning studio graphic eg. Logos, Posters, Flyers etc...</h4>
+    <img src="#" alt="">
+    <a class="btn" href="#">request now</a>
+</div>
+
+
+<div class="sev"class="sec">
+    <p>Web & Graphic Design</p>
+    <h4>Having quality design work is an integral 
+       <br>part of promoting and projecting the image that best reflects your music. Click to learn more.</h4>
+    <img src="#" alt="">
+    <a class="btn" href="#">request now</a>
+</div>
+
+
+<div class="sev"class="sec">
+    <p>Radio Ads</p>
+    <h4>Having an effective radio ad 
+       <br>is one of the most successful ways to gain recognition for your business. Click to learn more.</h4>
+    <img src="#" alt="">
+    <a class="btn" href="#">request now</a>
+</div>
+
+
+
+<div class="sev" class="third">
+    <p>studio photos</p>
+    <h4>all designing services 
+       <br> conserning studio graphic eg. Logos, Posters, Flyers etc...</h4>
+    <img src="#" alt="">
+    <a class="btn" href="#">request now</a>
+</div>
+</div>
+
+
+</section>
+
+      
+<!-- about us -->
+<section class="about" id="about">
+    <h3 class="heading">about us</h3>
+    <div class="image">
+        <div class="img">
+
         </div>
-        <div class="slide">
-            <img class="img2" id="imge" src="download.jpg" alt="">
+        <div class="detail">
+            <h3 class="heading">why choose us?</h3>
+            <p>all quality designs are found here </p>
+            <p>customer are serviced on what they request</p>
+            <p>our services are fast and derivered at a time </p>
+            <p>we have worked around the world now welcome </p>
+            <p>our customer is a king now come to be a king</p>
+            <p>contact us any time by the number bellow!</p>
+            <a href="#contact"> <i class="fas fa-phone"></i> 0657 856 790 </a>
+            <a href="#contact"> <i class="fas fa-phone"></i> 0765 467 029</a>
+            <details>
+                <!-- <img src="images/2.jpg" alt=""> -->
+                <p>our professinals <br>
+                    ROBERT STEPHANO <br> HENNRY MBULWA </p>
+              
+            </details>
+            <a href="#services" class="btn">load more</a>
         </div>
-        <div class="slide">
-            <img class="img3" id="imge" src="system.jpg" alt="">
+    
+    </div>
+</section>
+
+
+<!-- proffessionals -->
+<!-- 
+
+<section class="designers">
+    
+
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+
+       <div class="container" style="background-image: url(images/md2.jpg);">
+    
+        <p class="p">HENNRY MBULWA  grafics designers <br> enriquembulwa@gmail.com </p>
+         <a href="#services" class="btn">view more</a>
+       </div>
+
+      </div>
+
+      <div class="swiper-slide">
+        <div class="container" style="background-image: url(images/8.jpg);">
+          
+            <p >ROBERT STEPHANO website designers <br> nururobert@gmail.com </p>
+             <a href="#services" class="btn">view more</a>
+           </div>
+      </div>
+      
+      <div class="swiper-slide">
+        <div class="container" style="background-image: url(images/8.jpg);">
+         
+            <p >ROBERT STEPHANO website designers <br> nururobert@gmail.com </p>
+             <a href="#services" class="btn">view more</a>
+           </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="container" style="background-image: url(images/md2.jpg);">
+        
+            <p class="p">HENNRY MBULWA  grafics designers <br> enriquembulwa@gmail.com </p>
+             <a href="#services" class="btn">view more</a>
+           </div>
+      </div>
+ 
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+  </div>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+    spaceBetween: 50,
+        loop:true,
+    grabCursor:true,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      pagination: {
+        el: ".swiper-pagination",
+          dynamicBullets: true,
+      },
+    });
+  </script>
+
+  <div class="view">
+    <h3 class="heading">
+        MD designers <br>
+        our professinalist
+    </h3>
+  </div>
+</section> -->
+
+
+<!-- contacts -->
+<section class="contact" id="contact">
+    <h3 class="heading">contact us</h3>
+    <form action="#" method="post">
+        <div class="input">
+            <label for="name">full name:</label><br>
+            <input type="text" name="name" id="name" placeholder="your name ...">
         </div>
-        <div class="slide">
-            <img class="img4" id="imge" src="tracer.webp" alt="">
+        <div class="input">
+            <label for="name">phone number:</label><br>
+            <input type="number" name="phone" id="phone" placeholder="your phone number ...">
         </div>
-        <!-- AUTOMATIC NAVIGATION -->
-        <div class="navigatio-auto">
-            <div class="auto-btn1"></div>
-            <div class="auto-btn2"></div>
-            <div class="auto-btn3"></div>
-            <div class="auto-btn4"></div>
+        <div class="input">
+            <label for="name">email:</label><br>
+            <input type="email" name="email" id="email" placeholder="your email ...">
         </div>
+<div class="input">
+    <label for="comment">comments:</label>
+    <textarea name="comment" id="coment" cols="30" rows="5" placeholder="press your comments here... "></textarea>
+</div>
+        <input type="submit" class="btn" value="   submit   ">
+
+        
+    </form>
+</section>
+
+<!-- footer -->
+<section class="footer">
+    <div class="container">
+        <div class="box">
+            <h3>our services</h3>
+            <a href="#">website design</a>
+            <a href="#">grafics design</a>
+            <a href="#">logo design</a>
+            <a href="#">posters design</a>
+            <a href="#">flyers design</a>
+            <a href="#">bronchers design</a>
+            <a href="#"></a>
+            <a href="#"></a>
+            <a href="#"></a>
+            <a href="#"></a>
         </div>
-        <!-- MANUAL NAVIGATION -->
-        <div class="navigation-manual">
-            <label for="radio1" class="manual-btn"></label>
-            <label for="radio2" class="manual-btn"></label>
-            <label for="radio3" class="manual-btn"></label>
-            <label for="radio4" class="manual-btn"></label>
+
+        <div class="box">
+            <h3>contact us</h3>
+            <a href="#"> <i class="fas fa-phone"></i>+255 657 856 790 </a>
+           <a href="#"> <i class="fas fa-phone"></i>+255 765 467 029</a>
+           <a href="#"> <i class="fas fa-envelope"></i>nururobert40@gmail.com </a>
+           <a href="#"> <i class="fas fa-envelope"></i>enriquembulwa@gmail.com </a>
+           <a href="#"> <i class="fas fa-map"></i>mwanza, Tanzania </a>
+           <a href="#"> <i class="fas fa-envelope"></i>ask questions</a>
+        </div>
+
+        <div class="box">
+            <h3>follow us</h3>
+            <a href="#"><i class="fab fa-facebook"></i>facebook</a>
+            <a href="#"><i class="fab fa-instagram"></i>instagram</a>
+            <a href="#"><i class="fab fa-whatsapp"></i>whatsap</a>
+            <a href="#"><i class="fab fa-twitter"></i>twitter</a>
+            <a href="#"> <i class="fas fa-phone"></i>about us</a>
+        </div>
+
+             <div class="box">
+            <h3>extra links</h3>
+           <a href="#"> <i class="fas fas-angle-right"></i>advertising product</a>
+           <a href="#"> <i class="fas fas-angle-right"></i>animation design</a>
+           <a href="#"> <i class="fas fas-angle-right"></i>business card design</a>
+           <a href="#"> <i class="fas fas-angle-right"></i>banners design</a>
+           <a href="#"> <i class="fas fas-angle-right"></i>privacy policy</a>
+           <a href="#"> <i class="fas fas-angle-right"></i>terms of use</a>
         </div>
     </div>
-</div>
-
-<div class="container mt-3">
-    <h2>start the trade today with us by filling informations bellow</h2>
-    <form action="/action_page.php">
-      <div class="mb-3 mt-3">
-        <label for="email">Email:</label>
-        <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
-      </div>
-      <div class="mb-3">
-        <label for="pwd">Password:</label>
-        <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd">
-      </div>
-      <div class="form-check mb-3">
-        <label class="form-check-label">
-          <input class="form-check-input" type="checkbox" name="remember"> Remember me
-        </label>
-      </div>
-      <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
-  </div>
-<footer>
-
-<div class="hide"><br>
-<p>am JQUERY so click me </p>
-<p>click me to hide here</p>
-<p>me also i can hide </p>
-<p>i can hide too</p>
-</div>
-
-<div class="register"><br>
-    <a href="#"><button>SIGN UP</button></a>
-</div>
-
-<div class="quick"><br>
-    <h2>QUICK LINKS</h2>
-    <a href="#">HOME</a><br>
-    <a href="#">CONTACT US</a><br>
-    <a href="#">ABOUT US</a><br>
-    <a href="#">NEWS</a>
-</div>
-
-<div class="media"><br>
-    <h2>FIND US THROUGH</h2>
-    <i class="fa-brands fa-instagram"></i>
-    <i class="fa-brands fa-facebook"></i>
-    <i class="fa-brands fa-twitter"></i>
-</div>
-
-</footer>
-    </article>
-
-    <script> 
-
-var counter = 1;
-setInterval(function(){
-    document.getElementById('radio' + counter).checked = true;
-    counter++;
-    if(counter > 4){
-        counter = 1;
-    }
-}, 5000);
+    <div class="copy">&copy;2023 created by Robert web designer</div>
+</section>
 
 
-// SIDE MENU
 
-const sideBar = document.querySelector("aside");
-const sideMenu = document.querySelector("#menubtn");
-const closeBtn = document.querySelector("#closebtn");
-const headerBtn = document.querySelector("header");
-const content = document.querySelector("#content");
+<!-- 
+<i class='bx bxl-facebook-circle'></i>
+<i class='bx bxl-whatsapp' ></i>
+<i class='bx bxl-instagram' ></i>
+<i class='bx bxl-gmail' ></i>
+<i class='bx bx-phone-call' ></i>
+<i class='bx bx-code-alt'></i>
+<i class='bx bx-home' ></i>
+ -->
 
 
-// SIDE BAR CALL
-sideMenu.addEventListener('click', () => {
-    sideBar.style.display= 'flex';
-    headerBtn.style.display = 'none';
-    content.style.display = 'none';
+
+<script>
+const sideMenu = document.querySelector("aside");
+const menuBtn = document.querySelector("#menu-btn");
+
+let menu = document.querySelector('#menu-icon');
+let navbar = document.querySelector('#navbar');
+let closeBtn = document.querySelector('.bx-x');
+
+const themeToggler = document.querySelector(".theme-toggler");
+
+
+// show sidebar
+menu.addEventListener('click', () => {
+ navbar.style.display = 'block';
+ closeBtn.style.display = 'flex';
+ menu.style.display = 'none';
+ 
+//  menu.classList.toggle('bx-x');
 })
 
+// close sidebar
 closeBtn.addEventListener('click', () => {
-    sideBar.style.display= 'none';
-    headerBtn.style.display = 'flex';
-    content.style.display = 'block';
+    navbar.style.display = 'none';
+    closeBtn.style.display = 'none';
+ menu.style.display = 'flex';
 })
-    </script>
+
+
+// view more
+
+let second = document.querySelector('#second');
+let first_btn = document.querySelector('#first-btn');
+let third = document.querySelector('#third');
+let second_btn = document.querySelector('#second-btn');
+
+first_btn.addEventListener('click', () => {
+    second.style.display='flex';
+    first_btn.style.display='none';
+    second_btn.style.display='block';
+}),
+
+second_btn.addEventListener('click', () => {
+    third.style.display='flex';
+    // f_btn.style.display='none';
+    second_btn.style.display='none';
+})
+
+</script>
+<!-- <script src="script.js"></script> -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 </body>
 </html>
